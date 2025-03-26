@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        
+        <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>บอกรักไฟผับ 💖🎆</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                overflow: hidden;
+                font-family: Arial, sans-serif;
+                text-align: center;
+                transition: background 0.1s;
+                animation: flash 0.5s infinite alternate;
+            }
+    
+            @keyframes flash {
+                0% { background-color: red; }
+                20% { background-color: blue; }
+                40% { background-color: green; }
+                60% { background-color: yellow; }
+                80% { background-color: purple; }
+                100% { background-color: orange; }
+            }
+    
+            .hidden {
+                display: none;
+            }
+    
+            .love-message {
+                font-size: 3rem;
+                font-weight: bold;
+                color: white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+                animation: glow 1s infinite alternate;
+            }
+    
+            @keyframes glow {
+                0% { text-shadow: 0 0 10px white; }
+                100% { text-shadow: 0 0 30px yellow, 0 0 50px red; }
+            }
+    
+            .heart {
+                position: absolute;
+                color: red;
+                font-size: 2rem;
+                animation: float 4s infinite linear;
+            }
+    
+            @keyframes float {
+                0% { transform: translateY(0) scale(1); opacity: 1; }
+                50% { transform: translateY(-100px) scale(1.2); opacity: 0.8; }
+                100% { transform: translateY(-200px) scale(0.8); opacity: 0; }
+            }
+    
+            .btn {
+                background-color: black;
+                color: white;
+                padding: 15px 30px;
+                font-size: 20px;
+                border: none;
+                border-radius: 25px;
+                cursor: pointer;
+                transition: transform 0.2s, background 0.3s;
+                animation: neon 1s infinite alternate;
+            }
+    
+            @keyframes neon {
+                0% { box-shadow: 0 0 10px white; }
+                100% { box-shadow: 0 0 20px cyan, 0 0 40px magenta; }
+            }
+    
+            .btn:hover {
+                transform: scale(1.1);
+            }
+        </style>
+    </head>
+    <body>
+    
+        <button id="loveButton" class="btn">กดเลย!</button>
+    
+        <div id="loveMessage" class="love-message hidden">💖 ควายโดนโทรจันร์ 💖</div>
+    
+        <audio id="bgMusic" src="sounds\เพลงเสียวได้ใจ (1).mp3" preload="auto"></audio>
+    
+        <script>
+            document.getElementById("loveButton").addEventListener("click", function() {
+                this.style.display = "none";
+    
+                const message = document.getElementById("loveMessage");
+                message.classList.remove("hidden");
+                setTimeout(() => {
+                    message.style.opacity = 1;
+                }, 500);
+    
+                document.getElementById("bgMusic").play();
+    
+                for (let i = 0; i < 30; i++) {
+                    setTimeout(createHeart, i * 200);
+                }
+            });
+    
+            function createHeart() {
+                const heart = document.createElement("div");
+                heart.className = "heart";
+                heart.innerHTML = "โง่โดนกูดักหน้าจอแบบเรียลๆ";
+                document.body.appendChild(heart);
+    
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.bottom = "0px";
+                heart.style.animationDuration = (Math.random() * 5 + 6) + "s";
+    
+                setTimeout(() => {
+                    heart.remove();
+                }, 4000);
+            }
+        </script>
+    
+    </body>
+    </html>
+    
+    
+    
+    </body>
+    </html>
+
+   
+    
+
+</body>
+</html>
+
+
+
+</body>
+</html>
